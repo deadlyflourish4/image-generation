@@ -1,0 +1,15 @@
+{
+    "task_id": "string",
+    "status": "PENDING | RUNNING | SUCCESSED | FAILED",
+    "prompt": "string",
+    "model": "string",
+    "input_url": "string or null", 
+    "output_url": "string or null", 
+    "error_message": "string or null",
+
+    "created_at": "unix timestamp", 
+    "updated_at": "unix timestamp",
+
+    "worker_version": "string or null", 
+    "model_version": "string or null"
+}

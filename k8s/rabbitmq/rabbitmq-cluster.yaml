@@ -1,0 +1,17 @@
+apiVersion: rabbitmq.com/v1beta1
+kind: RabbitmqCluster
+metadata:
+  name: rmq
+  namespace: imagen
+spec:
+  replicas: 1
+  image: rabbitmq:4.2.1
+  persistence:
+    storage: 0   # <--- Không dùng PVC
+  resources:
+    requests:
+      cpu: 50m
+      memory: 128Mi
+    limits:
+      cpu: 150m
+      memory: 256Mi
