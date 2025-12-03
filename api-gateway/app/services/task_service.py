@@ -1,9 +1,12 @@
 import time 
 from app.utils.id_generator import generate_task_id
+from app.models.task_model import build_initial_task_data
+from app.models.request_model import GenerateRequest
+from app.cores.redis_db import save_task
 
-def create_task(req):
+def create_task(req: GenerateRequest):
     task_id = generate_task_id()
-
+    
     upload_url = generate_signed_upload_url(task_id)
 
     task_data = build_initial_task_data(
