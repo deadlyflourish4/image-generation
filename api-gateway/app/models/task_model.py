@@ -1,8 +1,9 @@
 import time
 
-def build_initial_task_data(task_id, prompt, model, input_url):
+def build_initial_task_data(task_id, prompt, model, task_type, input_url=None):
     return {
         "task_id": task_id,
+        "task_type": task_type,
         "status": "PENDING",
 
         "prompt": prompt,
